@@ -1,0 +1,83 @@
+<section id="kenapa-kami" class="relative py-14 sm:py-24 bg-white dark:bg-zinc-950 text-[#2E2E2A] dark:text-zinc-100 overflow-hidden transition-colors duration-300">
+    <!-- Grid Pattern Overlay -->
+    <div class="absolute inset-0 bg-grid-pattern pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="rz-reveal-up text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+            <h2 class="font-fraunces text-2xl sm:text-3xl font-extrabold text-[#2E2E2A] dark:text-zinc-50 tracking-tight leading-tight">
+                Kenapa Memilih Kami?
+            </h2>
+            <p class="text-xs sm:text-sm text-[#595952] dark:text-zinc-400 mt-2 max-w-xl mx-auto leading-relaxed">
+                Kami bukan agensi korporat dengan birokrasi rumit. Kami adalah mitra tumbuh pelaku UMKM yang mengutamakan komunikasi manusiawi dan hasil nyata.
+            </p>
+        </div>
+
+        <!-- 4 Differentiator Cards Grid (Mobile: 2x2 Grid / 2 Cards Kanan-Kiri) -->
+        <div class="grid grid-cols-2 gap-3 sm:gap-6">
+            
+            <!-- Card 1 -->
+            <div class="rz-reveal-left rz-delay-1 rz-card-3d bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-3.5 sm:p-6 shadow-sm group flex flex-col justify-between">
+                <div>
+                    <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-xl bg-[#A2B187]/20 dark:bg-[#A2B187]/15 text-[#8B9B70] dark:text-[#A2B187] flex items-center justify-center shrink-0 shadow-xs mb-2.5 sm:mb-4 group-hover:scale-105 transition-transform rz-3d-pop">
+                        <span class="text-base sm:text-xl">🏷️</span>
+                    </div>
+                    <h3 class="font-fraunces text-xs sm:text-base font-bold text-[#2E2E2A] dark:text-zinc-100 mb-1 leading-snug">
+                        Harga Ramah UMKM
+                    </h3>
+                    <p class="text-[10px] sm:text-xs text-[#595952] dark:text-zinc-400 leading-relaxed line-clamp-3 sm:line-clamp-none">
+                        Biaya transparan dan fleksibel, disesuaikan dengan perputaran kas dan skala usaha lokal Anda.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="rz-reveal-right rz-delay-2 rz-card-3d bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-3.5 sm:p-6 shadow-sm group flex flex-col justify-between">
+                <div>
+                    <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-xl bg-[#A2B187]/20 dark:bg-[#A2B187]/15 text-[#8B9B70] dark:text-[#A2B187] flex items-center justify-center shrink-0 shadow-xs mb-2.5 sm:mb-4 group-hover:scale-105 transition-transform rz-3d-pop">
+                        <span class="text-base sm:text-xl">☕</span>
+                    </div>
+                    <h3 class="font-fraunces text-xs sm:text-base font-bold text-[#2E2E2A] dark:text-zinc-100 mb-1 leading-snug">
+                        Komunikasi Santai WA
+                    </h3>
+                    <p class="text-[10px] sm:text-xs text-[#595952] dark:text-zinc-400 leading-relaxed line-clamp-3 sm:line-clamp-none">
+                        Tanpa istilah teknis membingungkan. Kirim foto dan teks via WhatsApp, kami yang atur semuanya.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="rz-reveal-left rz-delay-3 rz-card-3d bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-3.5 sm:p-6 shadow-sm group flex flex-col justify-between">
+                <div>
+                    <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-xl bg-[#A2B187]/20 dark:bg-[#A2B187]/15 text-[#8B9B70] dark:text-[#A2B187] flex items-center justify-center shrink-0 shadow-xs mb-2.5 sm:mb-4 group-hover:scale-105 transition-transform rz-3d-pop">
+                        <span class="text-base sm:text-xl">🎯</span>
+                    </div>
+                    <h3 class="font-fraunces text-xs sm:text-base font-bold text-[#2E2E2A] dark:text-zinc-100 mb-1 leading-snug">
+                        Revisi Sampai Puas
+                    </h3>
+                    <p class="text-[10px] sm:text-xs text-[#595952] dark:text-zinc-400 leading-relaxed line-clamp-3 sm:line-clamp-none">
+                        Kami mendengarkan feedback Anda dan melakukan perbaikan sampai websitenya terasa 100% pas.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="rz-reveal-right rz-delay-4 rz-card-3d bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-3.5 sm:p-6 shadow-sm group flex flex-col justify-between">
+                <div>
+                    <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-xl bg-[#A2B187]/20 dark:bg-[#A2B187]/15 text-[#8B9B70] dark:text-[#A2B187] flex items-center justify-center shrink-0 shadow-xs mb-2.5 sm:mb-4 group-hover:scale-105 transition-transform rz-3d-pop">
+                        <span class="text-base sm:text-xl">🤝</span>
+                    </div>
+                    <h3 class="font-fraunces text-xs sm:text-base font-bold text-[#2E2E2A] dark:text-zinc-100 mb-1 leading-snug">
+                        Pendampingan Usaha
+                    </h3>
+                    <p class="text-[10px] sm:text-xs text-[#595952] dark:text-zinc-400 leading-relaxed line-clamp-3 sm:line-clamp-none">
+                        Bukan lepas tangan. Kami ajarkan cara cek pesanan, update nomor kontak, atau ganti harga.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>

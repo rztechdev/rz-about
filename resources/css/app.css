@@ -1,0 +1,270 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+/* RZ Digital Creative Theme Tokens */
+@theme {
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-fraunces: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    
+    /* RZ Brand Colors */
+    --color-rz-primary: #A2B187;
+    --color-rz-deep: #8B9B70;
+    --color-rz-deep-hover: #7A8A60;
+    --color-rz-cream: #F9F8F3;
+    --color-rz-cream-subtle: #F2F0E6;
+    --color-rz-charcoal: #2E2E2A;
+    --color-rz-charcoal-muted: #595952;
+    --color-rz-charcoal-dark: #22221E;
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+/* Base Body Styles */
+body {
+    background-color: #FFFFFF;
+    color: #2E2E2A;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.dark body,
+html.dark body {
+    background-color: #09090b;
+    color: #f4f4f5;
+}
+
+/* ==========================================================================
+   RZ DIGITAL CREATIVE - SIGNATURE DESIGN UTILITIES & ANIMATIONS
+   ========================================================================== */
+
+/* Folded-Corner Paper Ribbon Effect for Cards */
+.rz-fold-tr {
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 0 100%);
+}
+
+.rz-fold-tr::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, transparent 50%, rgba(0, 0, 0, 0.12) 50%, rgba(0, 0, 0, 0.08) 55%, var(--tw-fold-color, #8B9B70) 56%);
+    border-bottom-left-radius: 4px;
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.06);
+    pointer-events: none;
+    z-index: 10;
+}
+
+.rz-fold-cream-tr {
+    --tw-fold-color: #ECEAE0;
+}
+
+.rz-fold-sage-tr {
+    --tw-fold-color: #7D8D63;
+}
+
+/* Subtle Ribbon Float Animation for Hero & Visuals */
+@keyframes rz-ribbon-drift {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-8px) rotate(0.5deg);
+    }
+}
+
+.animate-ribbon-drift {
+    animation: rz-ribbon-drift 7s ease-in-out infinite;
+}
+
+@keyframes rz-pulse-glow {
+    0%, 100% {
+        opacity: 0.35;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+}
+
+.animate-pulse-glow {
+    animation: rz-pulse-glow 5s ease-in-out infinite;
+}
+
+/* Accessible focus ring for interactive elements */
+.rz-focus-ring:focus-visible {
+    outline: 2px solid #8B9B70;
+    outline-offset: 3px;
+}
+
+/* ==========================================================================
+   SMOOTH & VARIED SCROLL REVEAL ANIMATIONS
+   ========================================================================== */
+
+.rz-reveal-up,
+.rz-reveal-scale,
+.rz-reveal-left,
+.rz-reveal-right,
+.rz-reveal-tilt {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 800ms;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.rz-reveal-up {
+    transform: translateY(32px);
+}
+
+.rz-reveal-scale {
+    transform: translateY(20px) scale(0.92);
+}
+
+.rz-reveal-left {
+    transform: translateX(-32px);
+}
+
+.rz-reveal-right {
+    transform: translateX(32px);
+}
+
+.rz-reveal-tilt {
+    transform: translateY(28px) rotate(-1.5deg);
+}
+
+/* Stagger delays for elegant sequencing */
+.rz-delay-1 { transition-delay: 80ms; }
+.rz-delay-2 { transition-delay: 160ms; }
+.rz-delay-3 { transition-delay: 240ms; }
+.rz-delay-4 { transition-delay: 320ms; }
+.rz-delay-5 { transition-delay: 400ms; }
+
+/* Active revealed state when in viewport */
+.rz-revealed.rz-reveal-up,
+.rz-revealed.rz-reveal-scale,
+.rz-revealed.rz-reveal-left,
+.rz-revealed.rz-reveal-right,
+.rz-revealed.rz-reveal-tilt,
+.rz-revealed {
+    opacity: 1 !important;
+    transform: translate(0, 0) scale(1) rotate(0deg);
+}
+
+/* ==========================================================================
+   3D INTERACTIVE CARD SYSTEM (Cursor-tracking 3D Tilt & Glare)
+   ========================================================================== */
+
+.rz-card-3d {
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    will-change: transform, box-shadow;
+    transition: transform 0.12s ease-out, box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.rz-card-3d-reset {
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.3s ease !important;
+}
+
+/* Dynamic glare reflection overlay */
+.rz-card-3d::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    opacity: var(--rz-glare-opacity, 0);
+    background: radial-gradient(
+        circle 260px at var(--rz-glare-x, 50%) var(--rz-glare-y, 50%),
+        rgba(255, 255, 255, 0.22),
+        transparent 70%
+    );
+    transition: opacity 0.3s ease;
+    z-index: 20;
+}
+
+.dark .rz-card-3d::after {
+    background: radial-gradient(
+        circle 280px at var(--rz-glare-x, 50%) var(--rz-glare-y, 50%),
+        rgba(255, 255, 255, 0.08),
+        transparent 70%
+    );
+}
+
+/* 3D Depth Layering on Card Hover */
+.rz-card-3d:hover {
+    box-shadow: 
+        0 20px 35px -10px rgba(46, 46, 42, 0.14),
+        0 10px 20px -5px rgba(139, 155, 112, 0.15) !important;
+    border-color: rgba(139, 155, 112, 0.5) !important;
+}
+
+.dark .rz-card-3d:hover {
+    box-shadow: 
+        0 25px 45px -12px rgba(0, 0, 0, 0.75),
+        0 0 25px rgba(139, 155, 112, 0.2) !important;
+    border-color: rgba(162, 177, 135, 0.4) !important;
+}
+
+/* 3D Pop for inner elements like icons & badges */
+.rz-card-3d .rz-3d-pop {
+    transform: translateZ(24px);
+    transform-style: preserve-3d;
+}
+
+.rz-card-3d .rz-3d-pop-sm {
+    transform: translateZ(12px);
+    transform-style: preserve-3d;
+}
+
+/* Respect user's accessibility reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .rz-reveal-up,
+    .rz-reveal-scale,
+    .rz-reveal-left,
+    .rz-reveal-right,
+    .rz-reveal-tilt {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .rz-card-3d {
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+/* Background Grid Pattern (Elemen Kotak-Kotak Netral Bersih - Matching rz - portal-client) */
+.bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+
+.dark .bg-grid-pattern,
+html.dark .bg-grid-pattern {
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.bg-grid-pattern-white {
+    background-size: 40px 40px;
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+}
+
