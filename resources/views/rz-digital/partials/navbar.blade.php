@@ -22,6 +22,9 @@
                     <a href="#kenapa-kami" class="text-xs lg:text-sm font-medium text-[#2E2E2A]/80 dark:text-zinc-300 hover:text-[#8B9B70] dark:hover:text-[#A2B187] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#8B9B70] hover:after:w-full after:transition-all">
                         Kenapa Kami
                     </a>
+                    <a href="#testimoni" class="text-xs lg:text-sm font-medium text-[#2E2E2A]/80 dark:text-zinc-300 hover:text-[#8B9B70] dark:hover:text-[#A2B187] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#8B9B70] hover:after:w-full after:transition-all">
+                        Testimoni
+                    </a>
                     <a href="#paket-harga" class="text-xs lg:text-sm font-medium text-[#2E2E2A]/80 dark:text-zinc-300 hover:text-[#8B9B70] dark:hover:text-[#A2B187] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#8B9B70] hover:after:w-full after:transition-all">
                         Paket Harga
                     </a>
@@ -121,6 +124,9 @@
             </a>
             <a @click="mobileOpen = false" href="#kenapa-kami" class="px-3 py-2 rounded-lg text-sm font-medium text-[#2E2E2A] dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
                 Kenapa Kami
+            </a>
+            <a @click="mobileOpen = false" href="#testimoni" class="px-3 py-2 rounded-lg text-sm font-medium text-[#2E2E2A] dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
+                Testimoni
             </a>
             <a @click="mobileOpen = false" href="#paket-harga" class="px-3 py-2 rounded-lg text-sm font-medium text-[#2E2E2A] dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
                 Paket Harga

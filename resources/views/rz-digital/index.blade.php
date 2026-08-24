@@ -82,14 +82,17 @@
         <!-- 6. Kenapa Pilih Kami Section -->
         @include('rz-digital.partials.why-us')
 
+        <!-- 6b. Testimoni Pelanggan Section -->
+        @include('rz-digital.partials.testimonials')
+
         <!-- 7. Paket & Harga Section -->
         @include('rz-digital.partials.pricing')
 
         <!-- 8. FAQ Section -->
         @include('rz-digital.partials.faq')
 
-        <!-- 9. Client Spotlight Placeholder -->
-        @include('rz-digital.partials.spotlight')
+        <!-- 8b. Payment Methods Marquee (di bawah FAQ) -->
+        @include('rz-digital.partials.payments')
 
         <!-- 10. Final CTA Section -->
         @include('rz-digital.partials.cta')

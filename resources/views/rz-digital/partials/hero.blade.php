@@ -1,4 +1,4 @@
-<section id="hero" class="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-white dark:bg-zinc-950 text-[#2E2E2A] dark:text-zinc-100 overflow-hidden transition-colors duration-300">
+<section id="hero" class="relative pt-40 pb-20 md:pt-56 md:pb-28 bg-white dark:bg-zinc-950 text-[#2E2E2A] dark:text-zinc-100 overflow-hidden transition-colors duration-300">
     <!-- Grid Pattern Overlay -->
     <div class="absolute inset-0 bg-grid-pattern pointer-events-none"></div>
 
@@ -7,18 +7,95 @@
             
             <!-- Left Column: Copy & CTAs -->
             <div class="lg:col-span-7 flex flex-col items-start text-left">
-                <!-- Main Headline -->
-                <h1 class="rz-reveal-up rz-delay-1 font-fraunces text-3xl sm:text-4xl lg:text-[44px] font-black text-[#2E2E2A] dark:text-zinc-50 leading-[1.18] sm:leading-[1.15] tracking-tight mb-5">
-                    Website Profesional untuk Usaha Anda, <span class="underline decoration-[#8B9B70]/50 underline-offset-8 decoration-wavy text-[#8B9B70] dark:text-[#A2B187]">Harga yang Masuk Akal</span> untuk UMKM.
-                </h1>
+                <!-- Main Headline (efek mengetik / typewriter + kursor) -->
+                <h1 id="rz-typewriter" class="relative font-fraunces text-3xl sm:text-4xl lg:text-[44px] font-black text-[#2E2E2A] dark:text-zinc-50 leading-[1.18] sm:leading-[1.15] tracking-tight mb-5">Website Profesional untuk UMKM, <span class="text-[#8B9B70] dark:text-[#A2B187]">Harga Masuk Akal.</span></h1>
+                <script>
+                    (function () {
+                        var h = document.getElementById('rz-typewriter');
+                        var hero = document.getElementById('hero');
+                        if (!h || !hero) return;
+                        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return; // biarkan statis
 
-                <!-- Subheadline -->
-                <p class="rz-reveal-up rz-delay-3 text-sm sm:text-base text-[#595952] dark:text-zinc-400 font-normal leading-relaxed max-w-xl mb-7">
-                    Kami bantu UMKM tampil lebih dipercaya di internet — desain modern, proses cepat, tanpa istilah teknis yang bikin pusing.
+                        // Ambil segmen (teks biasa + segmen highlight) dari isi asli
+                        var segments = [];
+                        h.childNodes.forEach(function (node) {
+                            if (node.nodeType === 3) segments.push({ text: node.textContent, cls: '' });
+                            else if (node.nodeType === 1) segments.push({ text: node.textContent, cls: node.getAttribute('class') || '' });
+                        });
+
+                        hero.classList.add('rz-typing'); // sembunyikan elemen bawah selama mengetik
+                        h.textContent = '';
+
+                        var chars = [];
+                        segments.forEach(function (seg) {
+                            seg.text.split(/(\s+)/).forEach(function (part) {
+                                if (part === '') return;
+                                if (/^\s+$/.test(part)) {
+                                    var sp = document.createElement('span');
+                                    sp.className = 'tw-char'; sp.dataset.space = '1';
+                                    sp.innerHTML = '&nbsp;'; sp.style.opacity = '0';
+                                    h.appendChild(sp); chars.push(sp);
+                                } else {
+                                    var word = document.createElement('span');
+                                    word.style.whiteSpace = 'nowrap'; word.style.display = 'inline-block';
+                                    if (seg.cls) word.className = seg.cls;
+                                    for (var i = 0; i < part.length; i++) {
+                                        var c = document.createElement('span');
+                                        c.className = 'tw-char'; c.textContent = part[i]; c.style.opacity = '0';
+                                        word.appendChild(c); chars.push(c);
+                                    }
+                                    h.appendChild(word);
+                                }
+                            });
+                        });
+
+                        var cursor = document.createElement('span');
+                        cursor.className = 'tw-cursor';
+                        h.appendChild(cursor);
+
+                        function moveCursor(el) {
+                            var hr = h.getBoundingClientRect(), r = el.getBoundingClientRect();
+                            cursor.style.left = (r.right - hr.left) + 'px';
+                            cursor.style.top = (r.top - hr.top) + 'px';
+                            cursor.style.height = r.height + 'px';
+                        }
+
+                        var idx = 0;
+                        function type() {
+                            if (idx >= chars.length) {
+                                hero.classList.remove('rz-typing');
+                                hero.classList.add('rz-typed-done'); // munculkan elemen bawah
+                                setTimeout(function () { cursor.classList.add('tw-cursor-hide'); }, 1600);
+                                return;
+                            }
+                            var c = chars[idx];
+                            c.style.opacity = '1';
+                            moveCursor(c);
+                            idx++;
+                            setTimeout(type, c.dataset.space ? 28 : 45);
+                        }
+
+                        setTimeout(type, 350);
+
+                        // Pengaman: bila mengetik gagal/menggantung, tampilkan semua teks & elemen bawah.
+                        setTimeout(function () {
+                            if (!hero.classList.contains('rz-typed-done')) {
+                                chars.forEach(function (c) { c.style.opacity = '1'; });
+                                cursor.classList.add('tw-cursor-hide');
+                                hero.classList.remove('rz-typing');
+                                hero.classList.add('rz-typed-done');
+                            }
+                        }, 6000);
+                    })();
+                </script>
+
+                <!-- Subheadline (muncul setelah headline selesai) -->
+                <p class="rz-after-stream text-sm sm:text-base text-[#595952] dark:text-zinc-400 font-normal leading-relaxed max-w-xl mb-7">
+                    Tampil lebih dipercaya di internet. Desain modern, proses cepat, tanpa istilah teknis yang bikin pusing.
                 </p>
 
                 <!-- Dual CTA Buttons -->
-                <div class="rz-reveal-up rz-delay-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full sm:w-auto mb-8">
+                <div class="rz-after-stream flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full sm:w-auto mb-8" style="animation-delay: 0.15s">
                     <a 
                         href="https://wa.me/6285151699883?text=Halo%20RZ%20Digital%20Creative,%20saya%20ingin%20konsultasi%20pembuatan%20website%20untuk%20usaha%20saya."
                         target="_blank"
@@ -43,22 +120,47 @@
                     </a>
                 </div>
 
-                <!-- Trust Badge -->
-                <div class="rz-reveal-up rz-delay-5 flex items-center gap-3 pt-4 border-t border-zinc-200 dark:border-zinc-800 w-full">
-                    <div class="flex -space-x-2 overflow-hidden">
-                        <div class="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-zinc-900 bg-zinc-100 dark:bg-zinc-800 text-[#2E2E2A] dark:text-zinc-200 font-bold text-xs flex items-center justify-center shadow-xs">☕</div>
-                        <div class="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-zinc-900 bg-zinc-100 dark:bg-zinc-800 text-[#2E2E2A] dark:text-zinc-200 font-bold text-xs flex items-center justify-center shadow-xs">🥐</div>
-                        <div class="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-zinc-900 bg-zinc-100 dark:bg-zinc-800 text-[#2E2E2A] dark:text-zinc-200 font-bold text-xs flex items-center justify-center shadow-xs">✂️</div>
-                        <div class="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-zinc-900 bg-zinc-100 dark:bg-zinc-800 text-[#2E2E2A] dark:text-zinc-200 font-bold text-xs flex items-center justify-center shadow-xs">🩺</div>
+                <!-- Trust Badge: layout semula (avatar inisial + rating & review berganti) -->
+                <div class="rz-after-stream flex items-center gap-3 pt-4 border-t border-zinc-200 dark:border-zinc-800 w-full" style="animation-delay: 0.3s">
+                    <!-- Avatar inisial (huruf, bukan foto orang) -->
+                    <div class="flex -space-x-2">
+                        @foreach([['R', 'bg-[#8B9B70]'], ['S', 'bg-amber-500'], ['T', 'bg-sky-600'], ['K', 'bg-rose-500']] as $a)
+                            <div class="inline-flex h-8 w-8 rounded-full ring-2 ring-white dark:ring-zinc-950 {{ $a[1] }} text-white font-bold text-xs items-center justify-center shadow-xs">{{ $a[0] }}</div>
+                        @endforeach
                     </div>
-                    <div class="flex flex-col">
-                        <div class="flex items-center gap-1 text-xs text-[#2E2E2A] dark:text-zinc-200 font-medium">
-                            <div class="flex text-amber-400 text-xs">★★★★★</div>
+
+                    <div class="flex flex-col min-w-0">
+                        <!-- Baris rating -->
+                        <div class="flex items-center gap-1.5 text-xs text-[#2E2E2A] dark:text-zinc-200">
+                            <span class="text-amber-400">★★★★★</span>
                             <span class="font-mono font-bold">100% Ramah UMKM</span>
                         </div>
-                        <p class="text-xs text-[#595952] dark:text-zinc-400">
-                            Sudah dipercaya pelaku usaha lokal (Resto, Salon, Toko & Klinik)
-                        </p>
+
+                        <!-- Baris review (berganti cepat, slide kanan → kiri) -->
+                        <div
+                            x-data="{
+                                i: 0,
+                                show: true,
+                                items: [
+                                    'Dipercaya usaha Resto, Salon, Toko & Klinik',
+                                    'Website toko online selesai hanya 7 hari',
+                                    'Komunikasi santai via WhatsApp, hasil rapi',
+                                    'Revisi sampai puas, harga ramah UMKM',
+                                    'Usaha jadi mudah ditemukan calon pembeli'
+                                ]
+                            }"
+                            x-init="setInterval(() => { show = false; setTimeout(() => { i = (i + 1) % items.length; show = true }, 180) }, 2200)"
+                            class="relative overflow-hidden h-4 mt-0.5">
+                            <span x-show="show"
+                                  x-transition:enter="transition ease-out duration-300"
+                                  x-transition:enter-start="opacity-0 translate-x-5"
+                                  x-transition:enter-end="opacity-100 translate-x-0"
+                                  x-transition:leave="transition ease-in duration-150 absolute inset-0"
+                                  x-transition:leave-start="opacity-100 translate-x-0"
+                                  x-transition:leave-end="opacity-0 -translate-x-5"
+                                  x-text="items[i]"
+                                  class="block text-xs text-[#595952] dark:text-zinc-400 truncate"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -154,3 +256,27 @@
         </div>
     </div>
 </section>
+
+<style>
+    @keyframes rz-word-in { from { opacity: 0; transform: translateY(0.35em); } to { opacity: 1; transform: none; } }
+    @keyframes tw-blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+
+    /* Kursor "garis" mengetik */
+    #hero .tw-cursor {
+        position: absolute;
+        width: 3px;
+        background: #8B9B70;
+        border-radius: 2px;
+        left: 0; top: 0;
+        animation: tw-blink 1s steps(1) infinite;
+        pointer-events: none;
+    }
+    #hero .tw-cursor-hide { opacity: 0 !important; animation: none; transition: opacity 0.3s; }
+
+    /* Elemen bawah disembunyikan selama mengetik, muncul setelah selesai */
+    #hero.rz-typing .rz-after-stream { opacity: 0; }
+    #hero.rz-typed-done .rz-after-stream {
+        opacity: 0;
+        animation: rz-word-in 0.5s ease forwards;
+    }
+</style>

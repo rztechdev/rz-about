@@ -14,8 +14,8 @@
 
 <div class="inline-flex items-center select-none group">
     <img 
-        src="{{ asset('images/logo_rz_teks.jpeg') }}" 
-        alt="RZ Digital Creative" 
-        class="{{ $imgHeight }} w-auto rounded-xl object-contain shadow-md shadow-black/10 group-hover:scale-105 transition-transform duration-300 border border-[#8B9B70]/40"
+        src="{{ asset('images/logo_rz_teks.png') }}"
+        alt="RZ Digital Creative"
+        class="{{ $imgHeight }} w-auto object-contain brightness-0 dark:brightness-100 group-hover:scale-105 transition-transform duration-300"
     />
 </div>
