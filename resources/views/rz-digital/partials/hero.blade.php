@@ -100,7 +100,7 @@
                         href="https://wa.me/6285151699883?text=Halo%20RZ%20Digital%20Creative,%20saya%20ingin%20konsultasi%20pembuatan%20website%20untuk%20usaha%20saya."
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full bg-[#8B9B70] hover:bg-[#7A8A60] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#8B9B70]/20 hover:shadow-lg transition-all duration-200 active:scale-95 group rz-focus-ring"
+                        class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#8B9B70] hover:bg-[#7A8A60] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#8B9B70]/20 hover:shadow-lg transition-all duration-200 active:scale-95 group rz-focus-ring"
                     >
                         <!-- WhatsApp Icon -->
                         <svg class="w-4.5 h-4.5 text-white group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
@@ -111,7 +111,7 @@
 
                     <a 
                         href="#paket-harga"
-                        class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-white dark:bg-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-800 text-[#2E2E2A] dark:text-zinc-100 border border-zinc-300 dark:border-zinc-700 text-xs sm:text-sm font-semibold shadow-xs transition-all duration-200 active:scale-95 rz-focus-ring"
+                        class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white dark:bg-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-800 text-[#2E2E2A] dark:text-zinc-100 border border-zinc-300 dark:border-zinc-700 text-xs sm:text-sm font-semibold shadow-xs transition-all duration-200 active:scale-95 rz-focus-ring"
                     >
                         <span>Lihat Paket Harga</span>
                         <svg class="w-4 h-4 text-[#8B9B70] dark:text-[#A2B187]" fill="none" viewBox="0 0 24 24" stroke="currentColor">

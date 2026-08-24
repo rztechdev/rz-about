@@ -22,7 +22,7 @@
                 href="https://wa.me/6285151699883?text=Halo%20RZ%20Digital,%20saya%20mau%20klaim%20penawaran%20perdana%20pembuatan%20website%20UMKM."
                 target="_blank"
                 rel="noopener noreferrer"
-                class="shrink-0 px-6 py-3 rounded-full bg-[#8B9B70] hover:bg-[#7A8A60] text-white text-xs sm:text-sm font-bold shadow-sm hover:shadow transition-all duration-200 active:scale-95 rz-focus-ring"
+                class="shrink-0 px-6 py-3 rounded-xl bg-[#8B9B70] hover:bg-[#7A8A60] text-white text-xs sm:text-sm font-bold shadow-sm hover:shadow transition-all duration-200 active:scale-95 rz-focus-ring"
             >
                 Klaim Promo Perdana WA →
             </a>

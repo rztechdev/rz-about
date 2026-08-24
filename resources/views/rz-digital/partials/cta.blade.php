@@ -28,7 +28,7 @@
                     href="https://wa.me/6285151699883?text=Halo%20RZ%20Digital%20Creative,%20saya%20siap%20konsultasi%20pembuatan%20website%20untuk%20usaha%20saya.%20Boleh%20bantu%20jelaskan%20langkah%20awalnya?"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full bg-[#8B9B70] hover:bg-[#7A8A60] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#8B9B70]/30 hover:shadow-lg transition-all duration-200 active:scale-95 group rz-focus-ring"
+                    class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#8B9B70] hover:bg-[#7A8A60] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#8B9B70]/30 hover:shadow-lg transition-all duration-200 active:scale-95 group rz-focus-ring"
                 >
                     <!-- WhatsApp SVG -->
                     <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">

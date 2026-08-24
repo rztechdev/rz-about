@@ -7,7 +7,8 @@
     "dev": "vite",
     "serve": "php artisan serve --port=8020",
     "all": "concurrently -n laravel,vite \"php artisan serve --port=8020\" \"npm run dev\"",
-    "all:host": "concurrently -n laravel,vite \"php artisan serve --host=0.0.0.0 --port=8020\" \"npm run dev -- --host\""
+    "all:host": "concurrently -n laravel,vite \"php artisan serve --host=0.0.0.0 --port=8020\" \"npm run dev -- --host\"",
+    "share": "npm run build && concurrently -k -n serve,ngrok \"php artisan serve --host=0.0.0.0 --port=8020\" \"ngrok http 8020\""
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",

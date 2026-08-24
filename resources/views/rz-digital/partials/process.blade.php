@@ -24,8 +24,8 @@
                         <span class="font-mono text-xl sm:text-2xl font-black text-[#A2B187] group-hover:text-[#8B9B70] transition-colors rz-3d-pop">
                             01
                         </span>
-                        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#A2B187]/20 dark:bg-[#A2B187]/15 flex items-center justify-center text-xs sm:text-sm text-[#8B9B70] dark:text-[#A2B187] rz-3d-pop-sm">
-                            💬
+                        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#A2B187]/20 dark:bg-[#A2B187]/15 flex items-center justify-center text-[#8B9B70] dark:text-[#A2B187] rz-3d-pop-sm">
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12a8 8 0 01-11.6 7.1L3 21l1.9-6.4A8 8 0 1121 12z"/></svg>
                         </div>
                     </div>
                     <h3 class="font-fraunces text-xs sm:text-base font-bold text-[#2E2E2A] dark:text-zinc-100 mb-1">
@@ -47,8 +47,8 @@
                         <span class="font-mono text-xl sm:text-2xl font-black text-[#A2B187] group-hover:text-[#8B9B70] transition-colors rz-3d-pop">
                             02
                         </span>
-                        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#A2B187]/20 dark:bg-[#A2B187]/15 flex items-center justify-center text-xs sm:text-sm text-[#8B9B70] dark:text-[#A2B187] rz-3d-pop-sm">
-                            🎨
+                        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#A2B187]/20 dark:bg-[#A2B187]/15 flex items-center justify-center text-[#8B9B70] dark:text-[#A2B187] rz-3d-pop-sm">
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM4 9h16M9 9v11"/></svg>
                         </div>
                     </div>
                     <h3 class="font-fraunces text-xs sm:text-base font-bold text-[#2E2E2A] dark:text-zinc-100 mb-1">
@@ -70,8 +70,8 @@
                         <span class="font-mono text-xl sm:text-2xl font-black text-[#A2B187] group-hover:text-[#8B9B70] transition-colors rz-3d-pop">
                             03
                         </span>
-                        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#A2B187]/20 dark:bg-[#A2B187]/15 flex items-center justify-center text-xs sm:text-sm text-[#8B9B70] dark:text-[#A2B187] rz-3d-pop-sm">
-                            ✏️
+                        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#A2B187]/20 dark:bg-[#A2B187]/15 flex items-center justify-center text-[#8B9B70] dark:text-[#A2B187] rz-3d-pop-sm">
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
                         </div>
                     </div>
                     <h3 class="font-fraunces text-xs sm:text-base font-bold text-[#2E2E2A] dark:text-zinc-100 mb-1">
@@ -93,8 +93,8 @@
                         <span class="font-mono text-xl sm:text-2xl font-black text-[#8B9B70] transition-colors rz-3d-pop">
                             04
                         </span>
-                        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#8B9B70] flex items-center justify-center text-xs sm:text-sm text-white rz-3d-pop-sm">
-                            🚀
+                        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#A2B187]/20 dark:bg-[#A2B187]/15 flex items-center justify-center text-[#8B9B70] dark:text-[#A2B187] rz-3d-pop-sm">
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0zM3.6 9h16.8M3.6 15h16.8M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/></svg>
                         </div>
                     </div>
                     <h3 class="font-fraunces text-xs sm:text-base font-bold text-[#2E2E2A] dark:text-zinc-100 mb-1">

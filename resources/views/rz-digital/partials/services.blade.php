@@ -88,7 +88,7 @@
                             </span>
 
                             @if($s['popular'])
-                                <span class="shrink-0 text-[9px] font-mono font-bold text-[#8B9B70] dark:text-[#A2B187]" title="Paling Populer">⭐</span>
+                                <svg class="shrink-0 w-3.5 h-3.5 text-[#8B9B70] dark:text-[#A2B187]" fill="currentColor" viewBox="0 0 20 20" title="Paling Populer"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.958a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.446a1 1 0 00-.364 1.118l1.286 3.958c.3.922-.755 1.688-1.54 1.118l-3.366-2.446a1 1 0 00-1.175 0l-3.366 2.446c-.784.57-1.838-.196-1.539-1.118l1.286-3.958a1 1 0 00-.363-1.118L2.98 9.385c-.783-.57-.38-1.81.588-1.81h4.161a1 1 0 00.951-.69l1.286-3.958z"/></svg>
                             @endif
                         </button>
                     @endforeach
@@ -110,7 +110,7 @@
                                     <h3 class="font-fraunces text-2xl sm:text-3xl font-extrabold text-[#2E2E2A] dark:text-zinc-50 leading-tight flex items-center gap-2.5">
                                         {{ $s['title'] }}
                                         @if($s['popular'])
-                                            <span class="text-[10px] font-mono font-bold text-[#8B9B70] dark:text-[#A2B187] bg-[#8B9B70]/12 px-2 py-0.5 rounded-full uppercase tracking-wide">⭐ Populer</span>
+                                            <span class="inline-flex items-center gap-1 text-[10px] font-mono font-bold text-[#8B9B70] dark:text-[#A2B187] bg-[#8B9B70]/12 px-2 py-0.5 rounded-full uppercase tracking-wide"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.958a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.446a1 1 0 00-.364 1.118l1.286 3.958c.3.922-.755 1.688-1.54 1.118l-3.366-2.446a1 1 0 00-1.175 0l-3.366 2.446c-.784.57-1.838-.196-1.539-1.118l1.286-3.958a1 1 0 00-.363-1.118L2.98 9.385c-.783-.57-.38-1.81.588-1.81h4.161a1 1 0 00.951-.69l1.286-3.958z"/></svg>Populer</span>
                                         @endif
                                     </h3>
                                 </div>
@@ -133,7 +133,7 @@
 
                             <div class="mt-8">
                                 <a href="#paket-harga"
-                                   class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#8B9B70] hover:bg-[#7A8A60] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 rz-focus-ring">
+                                   class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#8B9B70] hover:bg-[#7A8A60] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 rz-focus-ring">
                                     {{ $s['cta'] }}
                                     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5-5 5M5 12h13"/></svg>
                                 </a>

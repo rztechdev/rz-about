@@ -124,7 +124,7 @@
         <!-- Write a Review CTA -->
         <div class="rz-reveal-up text-center mt-10 sm:mt-14">
             <a href="{{ $reviewWaUrl }}" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-gradient-to-r from-[#8B9B70] to-[#A2B187] hover:from-[#7A8A60] hover:to-[#8B9B70] text-white text-sm font-bold shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 rz-focus-ring">
+               class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#8B9B70] to-[#A2B187] hover:from-[#7A8A60] hover:to-[#8B9B70] text-white text-sm font-bold shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 rz-focus-ring">
                 Tulis review kamu
                 <span class="material-symbols-outlined text-[18px]">rate_review</span>
             </a>
