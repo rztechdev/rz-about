@@ -44,3 +44,9 @@ Route::get('/sitemap.xml', function () {
     return response($xml, 200, ['Content-Type' => 'application/xml; charset=UTF-8']);
 })->name('sitemap');
 
+
+// Google Search Console verification file served via Laravel route.
+Route::get('/google1c7e1bac881571e0.html', function () {
+    return response('google-site-verification: google1c7e1bac881571e0.html')
+        ->header('Content-Type', 'text/html; charset=UTF-8');
+});
