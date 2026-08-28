@@ -24,3 +24,23 @@ Route::get('/company-profile', function () {
 Route::get('/rz-digital', function () {
     return view('rz-digital.index');
 })->name('rz-digital');
+
+/*
+|--------------------------------------------------------------------------
+| SEO: sitemap.xml
+|--------------------------------------------------------------------------
+| Dilayani lewat Laravel supaya URL selalu ikut APP_URL (http/https, domain).
+| Daftarkan https://rzdigitalcreative.my.id/sitemap.xml di Google Search Console.
+*/
+Route::get('/sitemap.xml', function () {
+    $lastmod = now()->toAtomString();
+
+    $urls = [
+        ['loc' => rtrim(route('home'), '/') . '/', 'priority' => '1.0', 'changefreq' => 'weekly'],
+    ];
+
+    $xml = view('sitemap', compact('urls', 'lastmod'))->render();
+
+    return response($xml, 200, ['Content-Type' => 'application/xml; charset=UTF-8']);
+})->name('sitemap');
+

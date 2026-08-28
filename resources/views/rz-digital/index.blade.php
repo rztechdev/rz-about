@@ -5,24 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <!-- Primary SEO Meta Tags -->
-    <title>RZ Digital Creative — Jasa Pembuatan Website Profesional Khusus UMKM Indonesia</title>
-    <meta name="title" content="RZ Digital Creative — Jasa Pembuatan Website Profesional Khusus UMKM Indonesia">
-    <meta name="description" content="Jasa pembuatan website profesional, estetik, dan terjangkau untuk UMKM Indonesia. Mulai dari Landing Page, Company Profile, hingga Toko Online dengan proses cepat 5-10 hari.">
-    <meta name="keywords" content="jasa website umkm, bikin website toko, company profile murah, web developer indonesia, rz digital creative, website cepat">
-    <meta name="author" content="RZ Digital Creative">
-    <meta name="theme-color" content="#A2B187">
-
-    <!-- Favicon & Brand Icons -->
-    <link rel="icon" type="image/jpeg" href="{{ asset('images/logo_rz_teks.jpeg') }}">
-    <link rel="apple-touch-icon" href="{{ asset('images/logo_rz_teks.jpeg') }}">
-
-    <!-- Open Graph / Facebook / WhatsApp -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:title" content="RZ Digital Creative — Jasa Pembuatan Website Khusus UMKM">
-    <meta property="og:description" content="Website profesional untuk usaha Anda dengan harga masuk akal. Tanpa istilah teknis ribet, selesai 5-10 hari kerja.">
-    <meta property="og:image" content="{{ asset('images/logo_rz_teks.jpeg') }}">
+    <!-- SEO: title, description, canonical, Open Graph, Twitter, JSON-LD -->
+    @include('rz-digital.partials.meta')
 
     <!-- Google Fonts: Inter, JetBrains Mono, Material Symbols Outlined -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -1,2 +1,7 @@
 User-agent: *
-Disallow:
+Allow: /
+
+# CSS & JS sengaja dibiarkan terbuka agar Googlebot bisa merender halaman
+# dengan benar (syarat penilaian mobile-friendly & Core Web Vitals).
+
+Sitemap: https://rzdigitalcreative.my.id/sitemap.xml

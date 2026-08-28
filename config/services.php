@@ -35,4 +35,7 @@ return [
         ],
     ],
 
+    // Kode verifikasi Google Search Console (metode "HTML tag").
+    'google_site_verification' => env('GOOGLE_SITE_VERIFICATION'),
+
 ];
